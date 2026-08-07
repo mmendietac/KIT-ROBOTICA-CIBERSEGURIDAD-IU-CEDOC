@@ -1,69 +1,53 @@
-# Prerequisites
-*.d
+# ════════════════════════════════════════════════════════════════════
+# .gitignore — Kit de Robótica Educativa en Ciberseguridad
+# ESCOM / CEDOC 2025-2026
+# ════════════════════════════════════════════════════════════════════
 
-# Compiled Object files
-*.slo
-*.lo
+# --- Credenciales y configuración con datos reales -------------------
+# NUNCA subir estos archivos: contienen WiFi, usuarios y contraseñas
+# MQTT reales. Usar las versiones .example como plantilla pública.
+config.h
+crear_usuario_mqtt.bat
+**/secrets.h
+**/*_credentials.*
+
+# Certificados y llaves TLS reales generados localmente
+*.crt
+*.key
+*.pem
+!**/*.example.crt
+!**/*.example.key
+mosquitto/certs/
+mosquitto/passwd
+
+# --- Binarios y artefactos de compilación -----------------------------
+*.bin
+*.hex
+*.elf
+*.map
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
 build/
-Build/
-build-*/
+.pio/
+.pioenvs/
+.piolibdeps/
 
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
+# --- Entorno de desarrollo (Arduino IDE / PlatformIO / VS Code) -------
+.vscode/
+*.code-workspace
+sketch_*/
 
-# Temporary files
-*.tmp
+# --- Sistema operativo --------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs y archivos temporales -----------------------------------------
 *.log
-*.bak
-*.swp
+*.tmp
+~$*.docx
+~$*.xlsx
 
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+# --- Archivos de Fritzing generados automáticamente ----------------------
+*.fzz.bak
+*.fzz.lck

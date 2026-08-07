@@ -1,0 +1,127 @@
+// ════════════════════════════════════════════════════════════════════
+// config.h.example — Plantilla pública (sin credenciales reales)
+// Kit de Robótica Educativa en Ciberseguridad v2.0
+// Especialización en Ciberseguridad — ESCOM / CEDOC — 2025
+// ════════════════════════════════════════════════════════════════════
+//
+// CÓMO USAR ESTE ARCHIVO:
+//   1. Copiar este archivo como "config.h" en la misma carpeta.
+//   2. Reemplazar los valores marcados <CAMBIAR> por las credenciales
+//      reales del entorno de laboratorio (WiFi, broker MQTT, usuarios).
+//   3. "config.h" está en .gitignore y NUNCA debe subirse al repositorio.
+//
+// ════════════════════════════════════════════════════════════════════
+
+#pragma once
+
+// ════════════════════════════════════════════════════════════════════
+// TIPOS COMPARTIDOS
+// ════════════════════════════════════════════════════════════════════
+enum EstadoLed {
+  LED_VERDE_FIJO,
+  LED_AZUL_PARPADEANTE,
+  LED_ROJO_PARPADEANTE,
+  LED_AMARILLO_PARPADEANTE,
+  LED_ROJO_RAPIDO,
+  LED_OFF
+};
+
+// ════════════════════════════════════════════════════════════════════
+// INTERRUPTOR MAESTRO — activar UNA sola línea
+// ════════════════════════════════════════════════════════════════════
+//#define MODO_STUXNET    // Robot VULNERABLE — chasis ROJO — Kit 2
+#define MODO_ICSCERT      // Robot SEGURO    — chasis AZUL — Kit 1
+
+// ════════════════════════════════════════════════════════════════════
+// CONTROL DE CÁMARA Y SENSOR
+// ════════════════════════════════════════════════════════════════════
+#define CAMARA_ACTIVA 0    // 1 solo para el Reto 5
+#define SENSOR_ACTIVO 0    // 1 para el Reto 4
+
+// ════════════════════════════════════════════════════════════════════
+// PARÁMETROS DE RED COMUNES
+// ════════════════════════════════════════════════════════════════════
+#define ROBOT_ID      "<CAMBIAR-robot-armonia-01-o-02>"
+#define BROKER_IP     "<CAMBIAR-IP-DEL-BROKER>"
+#define TOPIC_CMD     "robot/armonia/cmd"
+#define TOPIC_ESTADO  "robot/armonia/estado"
+#define TOPIC_SECRETO "robot/armonia/secreto"
+
+// ════════════════════════════════════════════════════════════════════
+// MODO STUXNET — Robot VULNERABLE (chasis ROJO — Kit 2)
+// ════════════════════════════════════════════════════════════════════
+#ifdef MODO_STUXNET
+  #define WIFI_SSID       "<CAMBIAR-SSID-LABORATORIO>"
+  #define WIFI_PASS       "<CAMBIAR-PASSWORD-DEBIL-INTENCIONAL>"
+  #define MQTT_TLS        false
+  #define MQTT_PUERTO     1883
+  #define MQTT_USUARIO    ""
+  #define MQTT_CONTRASENA ""
+  #define RATE_LIMIT      9999
+  #define COLOR_NORMAL    LED_ROJO_PARPADEANTE
+  #define OLED_MODO       "STUXNET"
+#endif
+
+// ════════════════════════════════════════════════════════════════════
+// MODO ICSCERT — Robot SEGURO (chasis AZUL — Kit 1)
+// ════════════════════════════════════════════════════════════════════
+#ifdef MODO_ICSCERT
+  #define WIFI_SSID       "<CAMBIAR-SSID-RED-SEGURA>"
+  #define WIFI_PASS       "<CAMBIAR-PASSWORD-FUERTE>"
+  #define MQTT_TLS        true
+  #define MQTT_PUERTO     8883
+  #define MQTT_USUARIO    "<CAMBIAR-USUARIO-MQTT>"
+  #define MQTT_CONTRASENA "<CAMBIAR-CONTRASENA-MQTT>"
+  #define RATE_LIMIT      20
+  #define COLOR_NORMAL    LED_VERDE_FIJO
+  #define OLED_MODO       "ICSCERT"
+#endif
+
+// ════════════════════════════════════════════════════════════════════
+// PARÁMETROS DE TIEMPO
+// ════════════════════════════════════════════════════════════════════
+#define VELOCIDAD_DEFECTO  180
+#define TIMEOUT_MQTT_MS    500
+#define INTERVALO_OLED_MS  2000
+
+// ════════════════════════════════════════════════════════════════════
+// PINES GPIO — mapa definitivo (no contiene datos sensibles)
+// ════════════════════════════════════════════════════════════════════
+#define I2C_SDA    38
+#define I2C_SCL    1
+#define OLED_ADDR  0x3C
+
+#define PIN_NEOPIXEL  48
+#define NUM_LEDS       3
+
+#define PIN_MOTOR_IZQ_FWD   39
+#define PIN_MOTOR_IZQ_BCK   40
+#define PIN_MOTOR_IZQ_BCK2  47
+#define PIN_MOTOR_DER_FWD   41
+#define PIN_MOTOR_DER_BCK   42
+#define PIN_MOTOR_DER_BCK2   2
+#define PIN_STBY            21
+
+#define PIN_HC_TRIG   3
+#define PIN_HC_ECHO  14
+#define PIN_IR_DER   15
+
+// ════════════════════════════════════════════════════════════════════
+// PINES CÁMARA OV2640 — CAMERA_MODEL_ESP32S3_EYE
+// ════════════════════════════════════════════════════════════════════
+#define CAM_PIN_PWDN   -1
+#define CAM_PIN_RESET  -1
+#define CAM_PIN_XCLK   15
+#define CAM_PIN_SIOD    4
+#define CAM_PIN_SIOC    5
+#define CAM_PIN_D0     11
+#define CAM_PIN_D1      9
+#define CAM_PIN_D2      8
+#define CAM_PIN_D3     10
+#define CAM_PIN_D4     12
+#define CAM_PIN_D5     18
+#define CAM_PIN_D6     17
+#define CAM_PIN_D7     16
+#define CAM_PIN_VSYNC   6
+#define CAM_PIN_HREF    7
+#define CAM_PIN_PCLK   13

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "Si utiliza este proyecto, por favor cítelo de la siguiente forma."
+title: "Kit de Robótica Educativa en Ciberseguridad"
+abstract: >
+  Implementación de un kit de robótica educativa con enfoque en ciberseguridad
+  bajo el principio Security by Design, para el fortalecimiento de las
+  competencias de seguridad digital de estudiantes de grado 10° y 11° de la
+  Institución Educativa La Armonía, municipio de Mosquera. Incluye firmware
+  dual (modo vulnerable / modo seguro), material pedagógico con retos tipo
+  Capture The Flag, manual del docente y documentación técnica completa.
+authors:
+  - family-names: "Mendieta Cifuentes"
+    given-names: "Milton Álvaro"
+    email: "mmendietac@gmail.com"
+  - family-names: "Pedroche Quevedo"
+    given-names: "Juan Pablo"
+    email: "jppqtc@gmail.com"
+type: software
+license: MIT
+date-released: 2026-01-01
+repository-code: "https://github.com/mmendietac/KIT-ROBOTICA-CIBERSEGURIDAD-IU-CEDOC"
+keywords:
+  - ciberseguridad
+  - robotica educativa
+  - IoT
+  - ESP32-S3
+  - OWASP
+  - CTF
+  - seguridad by design
+contact:
+  - name: "Dr. Arles Prieto (Director del proyecto)"
+identifiers:
+  - type: other
+    value: "Trabajo de grado - Especialización en Ciberseguridad, Escuela de Comunicaciones (ESCOM), Institución Universitaria CEDOC"
+    description: "Institución académica y programa donde se desarrolló el proyecto"

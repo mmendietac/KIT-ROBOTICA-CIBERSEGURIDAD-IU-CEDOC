@@ -1,7 +1,7 @@
 /* Kit Robotica Ciberseguridad ESCOM/CEDOC
 * Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
 * Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
-* Modulo: Control de motores 
+* Modulo: Lectura de Sensores HC-SR04 
 */
 // CORRECCIONES — 08/07/2026:
 //   [NUEVO] TRIG=GPIO3  (GPIO23 no expuesto en FNK0084)

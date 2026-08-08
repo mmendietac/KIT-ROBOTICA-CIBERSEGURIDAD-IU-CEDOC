@@ -1,6 +1,7 @@
-// ════════════════════════════════════════════════════════════════════
-// Kit_Robotica_Segura_V2.ino — Sketch principal
-// Kit de Robótica Educativa en Ciberseguridad v2.0
+/* Kit Robotica Ciberseguridad ESCOM/CEDOC
+* Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
+* Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
+*/
 // Especialización en Ciberseguridad — ESCOM / CEDOC — 2025
 // ════════════════════════════════════════════════════════════════════
 //

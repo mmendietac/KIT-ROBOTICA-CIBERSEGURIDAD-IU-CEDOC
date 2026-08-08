@@ -1,8 +1,8 @@
-// ════════════════════════════════════════════════════════════════════
-// motores.cpp — Control de 2 motores DC via TB6612FNG
-// ESP32-S3 — Arduino Core 3.x — API ledcAttach por pin
-// ESCOM / CEDOC — 2025
-// ════════════════════════════════════════════════════════════════════
+/* Kit Robotica Ciberseguridad ESCOM/CEDOC
+* Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
+* Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
+* Modulo: Control de motores 
+*/ 
 //
 // CORRECCIONES — 08/07/2026:
 //   [NUEVO] AIN2=GPIO47 y BIN2=GPIO2 habilitados como GPIO de salida

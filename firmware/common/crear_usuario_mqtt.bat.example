@@ -1,0 +1,63 @@
+@echo off
+title Crear Usuarios MQTT — Instalacion inicial
+color 0E
+echo.
+echo ============================================================
+echo   CREAR USUARIOS MQTT — Instalacion inicial
+echo   Kit de Robotica Educativa en Ciberseguridad v2.0
+echo   ESCOM / CEDOC 2025
+echo ============================================================
+echo.
+echo   Este script crea los dos usuarios MQTT del sistema.
+echo   ANTES DE EJECUTAR: reemplace <USUARIO_KIT1>, <PASSWORD_KIT1>,
+echo   <USUARIO_KIT2> y <PASSWORD_KIT2> por las credenciales reales
+echo   de su entorno de laboratorio. Este archivo de ejemplo NO
+echo   contiene contraseñas reales.
+echo.
+echo   IMPORTANTE: ejecutar UNA SOLA VEZ durante la instalacion.
+echo   Si se ejecuta de nuevo, sobrescribe el archivo passwd.
+echo ============================================================
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] Ejecutar como Administrador.
+    pause
+    exit /b 1
+)
+
+:: Verificar que Mosquitto esta instalado
+if not exist "C:\Program Files\mosquitto\mosquitto_passwd.exe" (
+    echo [ERROR] No se encuentra mosquitto_passwd.exe
+    echo Instalar Mosquitto desde: https://mosquitto.org/download
+    pause
+    exit /b 1
+)
+
+:: Crear directorio si no existe
+if not exist "C:\mosquitto" mkdir "C:\mosquitto"
+
+echo.
+echo [1/3] Creando usuario Kit 1 azul — MODO_ICSCERT...
+"C:\Program Files\mosquitto\mosquitto_passwd.exe" -b C:\mosquitto\passwd <USUARIO_KIT1> <PASSWORD_KIT1>
+if %errorlevel% equ 0 (echo       OK) else (echo       ERROR al crear usuario Kit 1)
+
+echo [2/3] Agregando usuario Kit 2 rojo — MODO_ICSCERT Blue Team...
+"C:\Program Files\mosquitto\mosquitto_passwd.exe" -b C:\mosquitto\passwd <USUARIO_KIT2> <PASSWORD_KIT2>
+if %errorlevel% equ 0 (echo       OK) else (echo       ERROR al crear usuario Kit 2)
+
+echo [3/3] Verificando archivo de passwords...
+if exist "C:\mosquitto\passwd" (
+    echo       OK — C:\mosquitto\passwd creado
+    echo       Contenido (hashes, no contraseñas en texto):
+    type C:\mosquitto\passwd
+) else (
+    echo       ERROR — no se creo el archivo passwd
+)
+
+echo.
+echo ============================================================
+echo   Usuarios creados. Verificar que mosquitto_icscert.conf
+echo   apunta a C:\mosquitto\passwd en la linea password_file.
+echo ============================================================
+echo.
+pause

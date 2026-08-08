@@ -1,7 +1,7 @@
 /* Kit Robotica Ciberseguridad ESCOM/CEDOC
 * Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
 * Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
-* Modulo: Control de motores 
+* Modulo: Autenticacion y cifrado TLS 
 */
 // OPTIMIZACIONES DE LATENCIA — 01/07/2026:
 //   - keepAlive reducido de 15s a 3s: el broker detecta más rápido

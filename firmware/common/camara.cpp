@@ -1,7 +1,8 @@
-// ════════════════════════════════════════════════════════════════════
-// camara.cpp — Servidor HTTP MJPEG para Kit Robótica Segura v2.0
-// ════════════════════════════════════════════════════════════════════
-//
+/* Kit Robotica Ciberseguridad ESCOM/CEDOC
+* Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
+* Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
+* Modulo: Control de motores 
+*/
 // COMPORTAMIENTO SEGÚN MODO Y CAMARA_ACTIVA:
 //
 //   MODO_STUXNET + CAMARA_ACTIVA=0 (Retos 1-4):

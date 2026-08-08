@@ -1,9 +1,8 @@
-// ════════════════════════════════════════════════════════════════════
-// display.cpp — OLED SSD1306 + LEDs NeoPixel WS2812B
-// Kit de Robótica Educativa en Ciberseguridad v2.0
-// Especialización en Ciberseguridad — ESCOM / CEDOC — 2025
-// ════════════════════════════════════════════════════════════════════
-//
+/* Kit Robotica Ciberseguridad ESCOM/CEDOC
+* Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
+* Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
+* Modulo: Modulo: Control de pantalla OLED SSD1306 
+*/
 // PINES GPIO (definidos en config.h — NO hardcodeados aquí):
 //   I2C_SDA = GPIO38  (ACTUALIZADO — antes GPIO8 = CAM_Y4 cámara)
 //   I2C_SCL = GPIO25  (ACTUALIZADO — antes GPIO9 = CAM_Y3 cámara)

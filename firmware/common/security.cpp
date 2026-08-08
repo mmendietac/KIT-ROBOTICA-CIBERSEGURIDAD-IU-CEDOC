@@ -1,9 +1,8 @@
-// ════════════════════════════════════════════════════════════════════
-// security.cpp — Conectividad WiFi + MQTT dual modo
-// Kit de Robótica Educativa en Ciberseguridad v2.0
-// ESCOM / CEDOC — 2025
-// ════════════════════════════════════════════════════════════════════
-//
+/* Kit Robotica Ciberseguridad ESCOM/CEDOC
+* Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
+* Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
+* Modulo: Control de motores 
+*/
 // OPTIMIZACIONES DE LATENCIA — 01/07/2026:
 //   - keepAlive reducido de 15s a 3s: el broker detecta más rápido
 //     las desconexiones y el cliente mantiene el TCP más activo.

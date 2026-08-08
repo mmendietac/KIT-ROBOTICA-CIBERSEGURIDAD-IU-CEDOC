@@ -1,9 +1,8 @@
-// ════════════════════════════════════════════════════════════════════
-// sensores.cpp — Módulo de sensores
-// Kit de Robótica Educativa en Ciberseguridad v2.0
-// Especialización en Ciberseguridad — ESCOM / CEDOC — 2025
-// ════════════════════════════════════════════════════════════════════
-//
+/* Kit Robotica Ciberseguridad ESCOM/CEDOC
+* Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
+* Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
+* Modulo: Control de motores 
+*/
 // CORRECCIONES — 08/07/2026:
 //   [NUEVO] TRIG=GPIO3  (GPIO23 no expuesto en FNK0084)
 //   [NUEVO] ECHO=GPIO14 (GPIO24 no expuesto en FNK0084)

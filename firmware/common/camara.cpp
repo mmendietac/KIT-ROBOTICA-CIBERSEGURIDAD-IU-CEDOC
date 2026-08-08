@@ -1,7 +1,7 @@
 /* Kit Robotica Ciberseguridad ESCOM/CEDOC
 * Autores: Milton Alvaro Mendieta Cifuentes, Juan Pablo Pedroche Quevedo 
 * Director: Dr. Arles Prieto * Licencia MIT (c) 2026 
-* Modulo: Control de motores 
+* Modulo: Camara OV2640 
 */
 // COMPORTAMIENTO SEGÚN MODO Y CAMARA_ACTIVA:
 //
